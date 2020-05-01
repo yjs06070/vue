@@ -12,15 +12,10 @@
 <body>
   <div id="app">
     <table>
-    <tr v-for="index in number">
-        <td>{{ 2 }}*{{index}}={{2*index}}</td>
-        <td>{{ 3 }}*{{index}}={{3*index}}</td>
-        <td>{{ 4 }}*{{index}}={{4*index}}</td>
-        <td>{{ 5 }}*{{index}}={{5*index}}</td>  
-        <td>{{ 6 }}*{{index}}={{6*index}}</td>
-        <td>{{ 7 }}*{{index}}={{7*index}}</td>
-        <td>{{ 8 }}*{{index}}={{8*index}}</td>
-        <td>{{ 9 }}*{{index}}={{9*index}}</td>
+    <tr v-for="r in row_size">
+        <td v-for="c in col_size">
+            {{ c+1 }}*{{ r }}={{ r*(c+1) }}
+      </td>
       </tr>
     </table>
   </div>
@@ -29,7 +24,8 @@
     var app = new Vue({
       el: '#app',
       data: {
-        number: 9
+        row_size: 9,
+        col_size: 8
       }
     })
    </script>

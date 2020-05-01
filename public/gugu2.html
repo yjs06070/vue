@@ -1,0 +1,37 @@
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    div#app { padding: 30px; margin: 30px auto; max-width: 500px; 
+      border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa; }
+      table { border-collapse: collapse; width: 400px; border: row 0; }
+    td { padding: 5px; border: 1px solid #aaa;  text-align: center; } 
+  </style>
+</head>
+<body>
+  <div id="app">
+    <table>
+    <tr v-for="index in number">
+        <td>{{ 2 }}*{{index}}={{2*index}}</td>
+        <td>{{ 3 }}*{{index}}={{3*index}}</td>
+        <td>{{ 4 }}*{{index}}={{4*index}}</td>
+        <td>{{ 5 }}*{{index}}={{5*index}}</td>  
+        <td>{{ 6 }}*{{index}}={{6*index}}</td>
+        <td>{{ 7 }}*{{index}}={{7*index}}</td>
+        <td>{{ 8 }}*{{index}}={{8*index}}</td>
+        <td>{{ 9 }}*{{index}}={{9*index}}</td>
+    </tr>
+    </table>
+  </div>
+
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        number: 9
+      }
+    })
+   </script>
+</body>    
+</html>
