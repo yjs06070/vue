@@ -10,20 +10,26 @@
 </head>
 <body>
   <div id="app">
-    <button type="button" v-on:click=>보이기</button>
-    <button type="button" v-on:click=>감추기</button>
+    <button type="button" v-on:click="show" v-bind:disabled="!show">보이기</button>
+    <button type="button" v-on:click="!show">감추기</button>
+    <canvas id="rec" width="300" height="300" v-show="showing"></canvas>
   </div>
   <script type="text/javascript">
+    let canvas =document.getElementById("rec");
+    let context= canvas.getContext("2d");
     context.linewidth=1;
     context.strokeStyle="black";
-    
+    context.fillStyle="yellow";
+    context.strokeRect(100,100,100,100);
     var app = new Vue({
       el: '#app',
       data: {
-            
+            show=true,
       },
       methods: {
-        
+        show: function(){
+            this.showing= true;
+        }
       }
     })    
    </script>

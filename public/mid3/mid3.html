@@ -1,0 +1,41 @@
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    div#app { padding: 30px; margin: 30px auto; max-width: 300px; 
+      border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa;  }
+    span { display: inline-block; margin: 5px; padding: 20px 100px; 
+      border: 1px solid black; cursor: pointer; }
+    div#app > div { margin-top: 20px; }
+    button { padding: 0.5em 2em; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <span >
+      {{ a }}
+    </span>
+    <div>
+      <button type="button" v-on:click="made">생성</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        a: " ",
+      },
+      methods: {
+        made() {
+          for (let i=0; i < this.a.length; ++i){
+          a[i]=Math.random()*8;
+          console.log(this.a);
+          }
+        }
+      }
+    })
+   </script>
+</body>    
+</html>
