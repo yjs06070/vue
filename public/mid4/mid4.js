@@ -1,6 +1,6 @@
-function sum(a,b){
-    for(let i=0;i<a.length;++i){
-        b=a[i]+b;
+function sum(c,b){
+    for(let i=0;i<c.length;++i){
+        b=c[i]+b;
     }
     return b;
 }
@@ -10,11 +10,11 @@ function test_sum(){
         a[i]=Math.floor(Math.random()*(10-1+1)+1);
     }
     console.log(a);
+    a = sum([]);
     return a;
 }
-let t=test_sum();
-console.log(t);
-console.log(t);
-console.log(t);
-console.log(t);
-console.log(t);
+setTimeout(test_sum,1000);
+setTimeout(test_sum,1000);
+setTimeout(test_sum,1000);
+setTimeout(test_sum,1000);
+setTimeout(test_sum,1000);
